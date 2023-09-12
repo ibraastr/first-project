@@ -1,0 +1,12 @@
+.logo_place_header {
+  z-index: 1;
+  position: absolute;
+  top: 30px;
+  left: 124px;
+  color: black;
+  background-color: rgb(206, 202, 202);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+}

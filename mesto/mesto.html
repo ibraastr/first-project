@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MESTO</title>
+
+  <link rel="stylesheet" href="mesto.css">
+  <link rel="stylesheet" href="./pages/index.css">
+
+</head>
+
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar__wrap">
+      <div class="hamb">
+        <div class="hamb__field" id="hamb">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+      <a href="#" class="logo" id="logo">
+        Мамаев<br>
+        Ибрагим
+      </a>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="https://ibraastr.github.io/russian-travel/index.html">Путешествие по России</a></li>
+        <li><a href="https://ibraastr.github.io/mesto/index.html">Mesto</a></li>
+        <li><a href="calculator.html">Калькулятор</a></li>
+        <li><a href="slider1.html">Слайдер1</a></li>
+        <li><a href="slider2.html">Слайдер2</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="popup_burger" id="popup"></div>
+
+<body style="margin-top: 75px;">
+
+
+
+  <div class="root">
+    <header class="header">
+      <img src="./images/logo.svg" alt="Логотип сайта" class="logo">
+    </header>
+    <main class="content">
+
+      <section class="profile">
+        <div class="profile__box">
+          <img src="./images/mestoAvatar.jpg" alt="Аватар" class="profile__avatar">
+          <div class="profile__info">
+            <div class="profile__details">
+              <h1 class="profile__name">Жак-Ив Кусто</h1>
+              <button type="button" class="button profile__edit-button"><img src="./images/editButton.svg" alt="Ручка">
+              </button>
+            </div>
+            <p class="profile__job">Исследователь океана</p>
+          </div>
+        </div>
+        <button type="button" class="button profile__add-button">
+        </button>
+      </section>
+
+      <section class="places">
+        <template id="card-template">
+          <div class="place">
+            <img src="./images/elbrus.jpg" alt="" class="place__image">
+            <button type="button" class="place__delete-card"></button>
+            <div class="place__description">
+              <p class="place__name"></p>
+              <button type="button" class="place__like"></button>
+            </div>
+          </div>
+        </template>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2020 Mesto Russia </p>
+    </footer>
+
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__close" type="button"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" action="#" method="POST" name="userInfo">
+          <input type="text" placeholder="Имя" class="popup__input popup__input_type_name" required maxlength="20">
+          <input type="text" placeholder="О себе" class="popup__input popup__input_type_job" required maxlength="30">
+          <button type="submit" class="button popup__button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup-place popup">
+      <div class="popup__container">
+        <button class="popup__add-close" type="button"></button>
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup-place__form" action="#" method="POST" name="placeInfo">
+          <input type="text" placeholder="Название" class="popup__input popup__input_type_place" required
+            maxlength="30">
+          <input type="text" placeholder="Ссылка на картинку" class="popup__input popup__input_type_url" required>
+          <button type="submit" class="button popup__add-button">Создать</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup-image popup">
+      <div class="popup-image__container">
+        <button class="popup-image__close" type="button"></button>
+        <img src="./images/elbrus.jpg" alt="" class="popup-image__image">
+        <p class="popup-image__text">привет</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./scripts/index.js"></script>
+  <script src="burger_mesto.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+.place__like {
+  background-image: url(../../../images/love.svg);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  width: 25px;
+  height: 19px;
+  background-repeat: no-repeat;
+  padding: 0;
+  background-position: center;
+  transition: all ease .2s;
+}
+
+
+.place__like:hover {
+  opacity: .5;
+}
